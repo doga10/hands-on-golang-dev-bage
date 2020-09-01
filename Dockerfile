@@ -10,6 +10,6 @@ FROM alpine:latest
 LABEL maintainer="Douglas Dennys <douglasdennys@yahoo.com>"
 WORKDIR /app
 RUN apk --no-cache add ca-certificates
-COPY --from=builder /go/src/app .
+COPY --from=builder /go/src/app/main .
 EXPOSE 8080
 CMD ["./main"]
